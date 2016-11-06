@@ -1,8 +1,6 @@
 /*
  *
 */
-
-
 #include <opencv2\objdetect.hpp>
 #include "opencv2\highgui/highgui.hpp"
 #include "opencv2\imgproc/imgproc.hpp"
@@ -31,7 +29,7 @@ int main(void)
 	//capture.open("http://192.168.0.102:8080/stream.wmv");
 
 
-	if (!capture.isOpened())  // verificam daca stream-ul s-a deschis
+	if (!capture.isOpened())  // verificam daca stream-ul webcam-ului s-a deschis
 		return -1;
 
 	// incarcarea fisierului cascade
@@ -92,7 +90,7 @@ void detectAndDisplay(Mat frame)
 	cv::Rect roi_c;
 
 	size_t ic = 0;   // indexul elementului curent
-	int ac = 0;		 // aria elementului curent
+	int ac = 0;		   // aria elementului curent
 
 	size_t ib = 0;   // indexul elementului cel mai mare
 	int ab = 0;      // aria celui mai mare element
