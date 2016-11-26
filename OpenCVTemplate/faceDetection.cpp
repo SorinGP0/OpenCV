@@ -1,9 +1,9 @@
 /*
  *
 */
-#include <opencv2\objdetect.hpp>
-#include "opencv2\highgui/highgui.hpp"
-#include "opencv2\imgproc/imgproc.hpp"
+#include <opencv2/objdetect.hpp>
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
 #include <string>
 #include <iostream>
 #include <stdio.h>
@@ -16,7 +16,7 @@ void detectAndDisplay(Mat frame);
 
 // variabile globale
 // Trebuie copiat fisiereul de haarcascade de la opencv/data/haarscascades in folderul targetat
-string face_cascade_name = "g:/haarcascade_frontalface_alt.xml";
+string face_cascade_name = "haarcascade_frontalface_alt.xml";
 CascadeClassifier face_cascade;
 string window_name = "Capture - Face detection";
 int filenumber; // numarul fisierului de salvat
@@ -132,7 +132,7 @@ void detectAndDisplay(Mat frame)
 		filename = ssfn.str();
 		filenumber++;
 
-		imwrite(filename, gray);
+	//imwrite(filename, gray);
 
 		Point pt1(faces[ic].x, faces[ic].y); // afisarea stream-ului  live de la camera
 		Point pt2((faces[ic].x + faces[ic].height), (faces[ic].y + faces[ic].width));
